@@ -168,10 +168,10 @@ DONT_DEXPREOPT_PREBUILTS := true
 #include device/qcom/sepolicy-legacy/sepolicy.mk
 SELINUX_IGNORE_NEVERALLOWS := true
 
-#BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
+#BOARD_VENDOR_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 #BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(VENDOR_PATH)/sepolicy/private
 
-BOARD_SEPOLICY_DIRS += \
+BOARD_VENDOR_SEPOLICY_DIRS += \
 	$(VENDOR_PATH)/sepolicy-tmp
 
 # Shims
