@@ -31,8 +31,8 @@ LOCAL_CFLAGS += \
      -Wno-unused-parameter
 
 LOCAL_C_INCLUDES:= \
-    $(TARGET_OUT_HEADERS)/gps.utils
-	$(TARGET_OUT_HEADERS)/libflp
+    $(TARGET_OUT_HEADERS)/gps.utils \
+    $(TARGET_OUT_HEADERS)/libflp
 
 LOCAL_HEADER_LIBRARIES := libgps.utils_headers
 
