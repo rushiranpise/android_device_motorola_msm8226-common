@@ -31,7 +31,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -78,10 +77,7 @@ TARGET_SCREEN_WIDTH := 720
 TARGET_BOOTANIMATION_HALF_RES := true
 
 # ANT+
-PRODUCT_PACKAGES += \
-    AntHalService \
-    com.dsi.ant.antradio_library \
-    libantradio
+
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -132,8 +128,8 @@ PRODUCT_PACKAGES += \
     libshim_skia \
     libshims_camera \
     libshim_qcopt \
-    libshims_sensorlistener \
-    Snap
+    libshims_sensorlistener
+    
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/libskia.so:system/lib/libskia.so
@@ -192,9 +188,6 @@ PRODUCT_PACKAGES += \
     libebtc
 
 # FM
-PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmjni
 
 # GNSS HAL
 PRODUCT_PACKAGES += \
@@ -249,9 +242,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.0-service
 
 # HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.manager@1.0 \
-    android.hidl.base@1.0
 
 # IRSC
 PRODUCT_COPY_FILES += \
@@ -298,11 +288,7 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.1-service.moto8226
     
 # Preopt
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    Settings \
-    Snap \
-    SystemUI \
-    TrebuchetQuickStep
+
 
 # Radio
 PRODUCT_PACKAGES += \
